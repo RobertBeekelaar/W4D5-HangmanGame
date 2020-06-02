@@ -56,7 +56,7 @@ test("List containing correctly guessed letters is updated", function () {
 // Test 5. Verliezen van de game wanneer er geen pogingen meer over zijn
 test("When player loses game show loseDiv", function () {
 
-  // document.body.innerHTML = `<div class= "lose" style="display: none;" >` + `<h2>You lost..</h2>` + `<p>The chosen word was: <span></span></p></div>`;
+  document.body.innerHTML = `<div class="lose" style="display: none;" ><div id="modal" style="display: none;">`;
   let loseDiv = document.querySelector(".lose");
   let modalScreen = document.querySelector("#modal");
   loseTheGame();
@@ -69,7 +69,7 @@ test("When player loses game show loseDiv", function () {
 // Test 6. Winnen van de game
 test("When player wins the game show winDiv and modal", function () {
 
-  // document.body.innerHTML = `<div class= "win" style="display: none;" >` + `<h2>You won!</h2></div>`;
+  document.body.innerHTML = `<div class= "win" style="display: none;" ><div id="modal" style="display: none;">`;
   let winDiv = document.querySelector(".win");
   let modalScreen = document.querySelector("#modal");
   winTheGame();

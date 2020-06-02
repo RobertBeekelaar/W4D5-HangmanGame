@@ -55,12 +55,14 @@ const loseTheGame = () => {
   gameOver = true;
 };
 
-// const modal = document.getElementById("modal");
-// const span = document.getElementsByClassName("close")[0];
-// span.addEventListener("click", () => {
-//   modal.style.display = "none";
-//   beginTheGame();
-// })
+// --> This is to make the modal screen close <-----
+const modal = document.getElementById("modal");
+const closebutton = document.getElementsByClassName("close")[0];
+closebutton.addEventListener("click", () => {
+  modal.style.display = "none";
+  beginTheGame();
+})
+
 
 //  Show random word in DOM
 const showRandomWordInDom = (randomWord) => {
@@ -115,7 +117,6 @@ const enterLetters = () => {
   updateInputArray(guessedLetter, inputArray);
   lettersGuessedCorrect(word, inputArray);
   lettersGuessedIncorrect(word, inputArray);
-
   if (wordGuessed(word, inputArray)) {
     winTheGame();
   } else if (tries >= 5) {

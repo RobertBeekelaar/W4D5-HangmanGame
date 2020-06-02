@@ -12,7 +12,6 @@ const wordList = [
 ];
 let maxAmount = 5;
 
-
 // Random Word is Picked
 let word;
 const pickRandomWord = function(wordArray) {
@@ -34,6 +33,7 @@ let inputArray;
 const wordGuessed = function (aRandomSplittedWord, inputArray) {
   let remaining = aRandomSplittedWord.filter(function (letter) {
     return !inputArray.includes(letter);
+
   });
   return remaining.length === 0;
 };
@@ -45,6 +45,7 @@ const clearInputValue = function () {
 
 //  Game is Won
 const winTheGame = function () {
+
   document.querySelector(".win").style.display = "block";
   gameOver = true;
 };
@@ -62,6 +63,7 @@ const showRandomWordInDom = function (randomWord) {
 
 //  Show remaing amount of tries in DOM
 const updateTriesDisplay = function (tries) {
+
   document.querySelector(".lives span").innerHTML = 5 - tries;
   return tries;
 };
@@ -70,6 +72,7 @@ const updateTriesDisplay = function (tries) {
 const lettersGuessedIncorrect = function (aRandomSplittedWord, inputArray) {
   let wrongLetters = inputArray.filter(function (letter) {
     return !aRandomSplittedWord.includes(letter);
+
   });
   document.querySelector(".guessed_letters").innerHTML = wrongLetters.join(" ");
 };
@@ -133,12 +136,12 @@ function beginTheGame() {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".guess").addEventListener("click", enterLetters);
+
   document
     .querySelector(".restart")
     .addEventListener("click", beginTheGame);
   beginTheGame();
 });
 
-
-
 module.exports={pickRandomWord, lettersGuessedCorrect, updateTriesDisplay, updateInputArray, loseTheGame, winTheGame, }
+

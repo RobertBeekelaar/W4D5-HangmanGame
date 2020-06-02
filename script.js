@@ -8,7 +8,42 @@ const wordList = [
   "telefoon",
   "moeder",
   "snoer",
-  "geeuw"
+  "geeuw",
+  "steil",
+  "boodschappentas",
+  "gezelligheid",
+  "noorden",
+  "academisch",
+  "zusters",
+  "snorkel",
+  "kayak",
+  "paraplu",
+  "mondkapje",
+  "corona",
+  "botermesje",
+  "handtas",
+  "product",
+  "accent",
+  "stijlkeuze",
+  "mode",
+  "schot",
+  "lynx",
+  "supermarkt",
+  "hamburger",
+  "kamerplant",
+  "schilderij",
+  "design",
+  "programmeur",
+  "voetbaluitzending",
+  "woordkeuze",
+  "vezels",
+  "debat",
+  "contact",
+  "protest",
+  "maandblad",
+  "politiek",
+  "solidariteit",
+  "bewustzijn",
 ];
 let maxAmount = 5;
 
@@ -128,7 +163,7 @@ const enterLetters = () => {
   const addDrawing = () => {
     const drawinglocation = document.querySelector('.drawing')
     const newImg = document.createElement('img')
-    newImg.src = `Hangman${number}.png`
+    newImg.src = `images/Hangman${number}.png`
     drawinglocation.innerHTML = ""
     drawinglocation.appendChild(newImg);
   }

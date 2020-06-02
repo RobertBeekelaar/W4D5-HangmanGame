@@ -22,13 +22,14 @@ body{
   grid-row: 1/2;
   padding-top: 80px;
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .header p {
   color: rgb(0, 70, 66);
   padding: 20px 0px;
-  font-size: 14px;
+  font-size: 16px;
+  text-transform: lowercase;
 }
 
 button{
@@ -40,10 +41,10 @@ button{
   font-size: 12px;
   cursor: pointer;
   margin-left: 5px;
-  background-color: rgb(215, 240, 240);
-  border-radius: 4px;
-  transition: all 0.2s;
-  
+  background-color: rgb(188, 230, 230);
+  border-radius: 5px;
+  transition: all 0.3s;
+  padding: 0px;
 }
 
 button:hover{
@@ -69,9 +70,9 @@ background-color: rgb(126, 172, 172);
   height: 25px;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;;
-  background-color: rgb(215, 240, 240);
+  background-color: rgb(188, 230, 230);
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -91,11 +92,14 @@ background-color: rgb(126, 172, 172);
 .current{
   padding-top: 15px;
   text-transform: uppercase;
-  font-size: 18px;;
+  font-size: 16px;;
 }
 
 .the_word{
   color: rgb(0, 70, 66);
+  font-family: 'Special Elite', cursive;
+  color: #037138;
+  font-size: 24px;
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -115,6 +119,7 @@ background-color: rgb(126, 172, 172);
 
 .lives{
   color: rgb(0, 70, 66);
+  padding-top: 20px;
 }
 
 #modal{
@@ -132,8 +137,7 @@ background-color: rgb(126, 172, 172);
 .modal_content{
   margin: 15% auto;
   padding: 20px;
-  width: 400px;
-  
+  width: 340px;
 }
 
 .close{
@@ -174,6 +178,7 @@ background-color: rgb(126, 172, 172);
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-top: 10px;
 }
 
 .drawing img{
@@ -199,7 +204,7 @@ background-color: rgb(126, 172, 172);
 .header p {
     color: rgb(0, 70, 66);
     padding: 20px 0px;
-    font-size: 8px;
+    font-size: 9px;
   }
 
 button{
@@ -209,6 +214,22 @@ button{
 
 .maincontent h3 {
   font-size: 12px;
+}
+
+.current{
+  font-size: 12px;
+}
+
+.lives{
+ font-size: 12px;
+}
+
+.the_word{
+  font-size: 22px;
+}
+
+.guessed_letters{
+  font-size: 22px;
 }
 
 }

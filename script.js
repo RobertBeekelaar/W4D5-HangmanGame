@@ -128,11 +128,7 @@ const enterLetters = () => {
   const addDrawing = () => {
     const drawinglocation = document.querySelector('.drawing')
     const newImg = document.createElement('img')
-<<<<<<< HEAD
-    newImg.src = `images/Hangman${number}.png`
-=======
     newImg.src = `Hangman${number}.png`
->>>>>>> 9298953df118e731f25dfd479f2b26576ac19bf9
     drawinglocation.innerHTML = ""
     drawinglocation.appendChild(newImg);
   }

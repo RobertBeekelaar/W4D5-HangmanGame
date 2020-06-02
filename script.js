@@ -14,7 +14,7 @@ let maxAmount = 5;
 
 // Random Word is Picked
 let word;
-const pickRandomWord = function(wordArray) {
+const pickRandomWord = function (wordArray) {
   let randomIndex = Math.floor(Math.random() * wordArray.length);
   const randomWord = wordArray[randomIndex];
   console.log(randomWord);
@@ -43,18 +43,30 @@ const clearInputValue = function () {
   document.querySelector("input").value = "";
 };
 
-//  Game is Won
-const winTheGame = function () {
 
+
+let gameOver;
+const winTheGame = function () {
+  document.querySelector("#modal").style.display = "block";
   document.querySelector(".win").style.display = "block";
   gameOver = true;
 };
 
-//  Game is Lost
 const loseTheGame = function () {
+  // when losing 3 times, this has to happen
+  document.querySelector("#modal").style.display = "block";
   document.querySelector(".lose").style.display = "block";
   gameOver = true;
 };
+
+const modal = document.getElementById("modal");
+const span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+  modal.style.display = "none";
+  beginTheGame();
+}
+
+
 
 //  Show random word in DOM
 const showRandomWordInDom = function (randomWord) {
@@ -143,5 +155,5 @@ document.addEventListener("DOMContentLoaded", function () {
   beginTheGame();
 });
 
-module.exports={pickRandomWord, lettersGuessedCorrect, updateTriesDisplay, updateInputArray, loseTheGame, winTheGame, }
+module.exports = { pickRandomWord, lettersGuessedCorrect, updateTriesDisplay, updateInputArray, loseTheGame, winTheGame, }
 

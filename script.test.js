@@ -39,7 +39,10 @@ test("Amount of tries is updated", function(){
   
   expect(output).toBe(3);
   expect(spanHTML).toBe("3");
+<<<<<<< HEAD
   
+=======
+>>>>>>> b7856b63592e9828629c218bac8b1fff3bd33fd6
   })
 
 
@@ -62,7 +65,10 @@ test("When player loses game show loseDiv", function(){
   loseTheGame();
 
   expect(loseDiv.style.display).toBe("block");
+<<<<<<< HEAD
 
+=======
+>>>>>>> b7856b63592e9828629c218bac8b1fff3bd33fd6
 })
 
 // Test 6. Winnen van de game

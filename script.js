@@ -12,7 +12,6 @@ const wordList = [
 ];
 let maxAmount = 5;
 
-
 // Random Word is Picked
 let word;
 const pickRandomWord = function(wordArray) {
@@ -62,6 +61,7 @@ const showRandomWordInDom = function (randomWord) {
 
 //  Show remaing amount of tries in DOM
 const updateTriesDisplay = function (tries) {
+
   document.querySelector(".lives span").innerHTML = 5 - tries;
   return tries;
 };
@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", beginTheGame);
   beginTheGame();
 });
-
 
 
 module.exports={pickRandomWord, lettersGuessedCorrect, updateTriesDisplay, updateInputArray, loseTheGame, winTheGame}

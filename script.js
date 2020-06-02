@@ -42,7 +42,6 @@ const clearInputValue = () => {
   document.querySelector("input").value = "";
 };
 
-
 const winTheGame = () => {
   document.querySelector("#modal").style.display = "block";
   document.querySelector(".win").style.display = "block";
@@ -54,14 +53,6 @@ const loseTheGame = () => {
   document.querySelector(".lose").style.display = "block";
   gameOver = true;
 };
-
-// --> This is to make the modal screen close <-----
-const modal = document.getElementById("modal");
-const closebutton = document.getElementsByClassName("close")[0];
-closebutton.addEventListener("click", () => {
-  modal.style.display = "none";
-  beginTheGame();
-})
 
 
 //  Show random word in DOM
@@ -112,7 +103,9 @@ const enterLetters = () => {
   if (!word.includes(guessedLetter)) {
     tries++;
     updateTriesDisplay(tries);
+    console.log(tries)
   }
+
 
   updateInputArray(guessedLetter, inputArray);
   lettersGuessedCorrect(word, inputArray);
@@ -122,6 +115,24 @@ const enterLetters = () => {
   } else if (tries >= 5) {
     loseTheGame();
   }
+
+  // --> This is to make the modal screen close <-----
+  const modal = document.getElementById("modal");
+  const closebutton = document.getElementsByClassName("close")[0];
+  closebutton.addEventListener("click", () => {
+    modal.style.display = "none";
+    beginTheGame();
+  })
+
+  const number = tries
+  const addDrawing = () => {
+    const drawinglocation = document.querySelector('.drawing')
+    const newImg = document.createElement('img')
+    newImg.src = `Hangman${number}.png`
+    drawinglocation.innerHTML = ""
+    drawinglocation.appendChild(newImg);
+  }
+  addDrawing();
 };
 
 function beginTheGame() {
@@ -148,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .addEventListener("click", beginTheGame);
   beginTheGame();
 });
+
 
 module.exports = { pickRandomWord, lettersGuessedCorrect, updateTriesDisplay, updateInputArray, loseTheGame, winTheGame, }
 

@@ -113,8 +113,6 @@ background-color: rgb(126, 172, 172);
 
 #modal{
   display: none;
-  /* grid-column: 1/6;
-  grid-row: 1/6; */
   position: fixed;
   left: 0;
   top: 0;
